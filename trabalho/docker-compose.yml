@@ -1,0 +1,39 @@
+version: "3.8"
+
+services:
+  api:
+    container_name: nest_api
+    build:
+      context: .
+      target: development
+    volumes:
+      - .:/app
+      - /app/node_modules
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    env_file:
+      - .env
+    networks:
+      - docker-network
+    depends_on:
+      - postgres
+
+  postgres:
+    container_name: nest_db
+    image: postgres:13-alpine
+    environment:
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME}
+    ports:
+      - "5433:5433"
+    networks:
+      - docker-network
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+networks:
+  docker-network:
+
+volumes:
+  db_data:

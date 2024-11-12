@@ -1,0 +1,13 @@
+{
+  "name": "trabalho",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ormconfig.js",
+  "scripts": {
+    "start": "node index.js",
+    "start:dev": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

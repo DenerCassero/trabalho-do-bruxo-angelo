@@ -1,0 +1,21 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Mon 2024-11-11 20:02:07 -03; 21h ago
+TriggeredBy: [0;1;32m●[0m docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 5445 (dockerd)
+      Tasks: 13
+     Memory: 28.8M
+     CGroup: /system.slice/docker.service
+             └─5445 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+
+nov 11 20:02:06 otavio systemd[1]: Starting Docker Application Container Engine...
+nov 11 20:02:07 otavio dockerd[5445]: time="2024-11-11T20:02:07.001465499-03:00" level=info msg="Starting up"
+nov 11 20:02:07 otavio dockerd[5445]: time="2024-11-11T20:02:07.002281561-03:00" level=info msg="detected 127.0.0.53 nameserver, assuming systemd-resolved, so using resolv.conf: /run/systemd/resolve/resolv.conf"
+nov 11 20:02:07 otavio dockerd[5445]: time="2024-11-11T20:02:07.152542745-03:00" level=info msg="Loading containers: start."
+nov 11 20:02:07 otavio dockerd[5445]: time="2024-11-11T20:02:07.451481350-03:00" level=info msg="Loading containers: done."
+nov 11 20:02:07 otavio dockerd[5445]: time="2024-11-11T20:02:07.478020111-03:00" level=warning msg="WARNING: No swap limit support"
+nov 11 20:02:07 otavio dockerd[5445]: time="2024-11-11T20:02:07.478091278-03:00" level=info msg="Docker daemon" commit="24.0.7-0ubuntu2~20.04.1" graphdriver=overlay2 version=24.0.7
+nov 11 20:02:07 otavio dockerd[5445]: time="2024-11-11T20:02:07.478208091-03:00" level=info msg="Daemon has completed initialization"
+nov 11 20:02:07 otavio dockerd[5445]: time="2024-11-11T20:02:07.524486962-03:00" level=info msg="API listen on /run/docker.sock"
+nov 11 20:02:07 otavio systemd[1]: Started Docker Application Container Engine.
